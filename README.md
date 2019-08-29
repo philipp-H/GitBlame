@@ -2,6 +2,12 @@
 
 GitBlame is a streamlined GUI for viewing `git blame` output on Windows.
 
+## CommandLine Parameter
+
+* GitBlame.exe [Filename]
+* GitBlame.exe [Filename] [LineNumber]
+* GitBlame.exe /restart [RepoPath] [Filename] [SHA] [LineNumber]
+
 ## Download
 
 Visit the [main site](http://bradleygrainger.com/GitBlame/) to get the latest installer.
