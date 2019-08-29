@@ -137,6 +137,17 @@ namespace GitBlame
 			e.CanExecute = m_model.Position != null;
 		}
 
-		readonly MainWindowModel m_model;
-	}
+        private void Blame_Drop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                var files = (string[])e.Data.GetData(DataFormats.FileDrop);
+
+                // Draging can handle mutliple files - for now just open the first file
+                m_model.NavigateTo(new BlamePositionModel(files[0]));
+            }
+        }
+
+        readonly MainWindowModel m_model;
+    }
 }

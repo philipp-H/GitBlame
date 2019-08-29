@@ -69,7 +69,7 @@
 			<ContentControl Content="{Binding Notification}"  />
 		</Border>
 		<ScrollViewer CanContentScroll="true" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible">
-            <src:BlameControl x:Name="Blame" />
+            <src:BlameControl x:Name="Blame" AllowDrop="true" Drop="Blame_Drop" />
         </ScrollViewer>
     </DockPanel>
 </mah:MetroWindow>
